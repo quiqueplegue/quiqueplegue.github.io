@@ -21,7 +21,7 @@
 		<tr><td>Curvas cerradas</td> <td class="npistas">8</td></tr>
 	</tbody>
 	<tfoot> 
-		<tr class="total"> <td>Total: </td> <td></td> </tr> 
+		<tr class="totalTabla"> <td>Total: </td> <td></td> </tr> 
 	</tfoot>
 	</table>
 
@@ -33,11 +33,11 @@
 			suma += parseInt(numPistas.val());
 		});
 
-		$('.total').html(suma);
+		$('#total').html(suma);
 	});
 	</script>
 
-	<div id='cambiando' style='border:dashed'></div>
+	<div id='total'> </div>
 
 </body>
 </html>
