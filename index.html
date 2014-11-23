@@ -31,7 +31,7 @@
 
 	<script type='text/javascript'>
 	$(document).ready(function() {
-		var suma=0;
+		var suma=parseInt(0);
 		$('.npistas').each(function(){
 			suma += parseInt($this.val());
 		});
@@ -39,38 +39,6 @@
 		$("#total").html(suma);
 	});
 	</script>
-
-	<table border="1" id="myTable">
-	<thead>
-	<tr>
-	<th>Item</th>
-	<th>Price</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-	<td>Banana</td>
-	<td class ="price">50</td>
-	</tr>
-	<tr>
-	 <td>Apple</td>
-	 <td class ="price">100</td>
-	</tr>
-	</tbody>
-	<tfoot>
-		<tr class="summary">
-		    <td>Total:</td>
-		    <td></td>
-		<tr>
-	</tfoot>
-	</table>
-
-	<script type='text/javascript'>
-	$(document).ready(function(){
-		$('#myTable').sumtr({sumCells : '.price'} );
-	});
-	</script>
-
 
 </body>
 </html>
