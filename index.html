@@ -10,11 +10,10 @@
         }
         #totalTabla {
             font-weight: bold;
-            color:#BB0C68;
+            color:#174000;
         }
         .npistas {
-            background-color: #AB00B0;
-            text-align: right;
+            text-align: center;
         }
     </style>
 
@@ -60,7 +59,7 @@
 	$(document).ready(function() {
 		var suma = 0;
 		$('.npistas').each(function(){
-			$(this).keyup(function(){
+			$(this).keyup(function(){ // Activo evento al soltar una tecla pulsada
 				computaSuma();
 			});
 		});
@@ -84,6 +83,17 @@
 	<p>Total recibido: </p>
 	<div id='total'></div>
 	<br>
+
+	Campo origen: <input type="text" id="origenTexto" value="Solo sé que no sé nada"><br>
+	Campo destino: <input type="text" id="destinoTexto"><br><br>
+
+	<button onclick="funcionCopiaTxt()">Copia el texto</button>
+
+	<script>
+	function funcionCopiaTxt() {
+		document.getElementById("destinoTexto").value = document.getElementById("origenTexto").value;
+	}
+	</script>
 
 
 </body>
