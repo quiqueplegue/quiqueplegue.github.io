@@ -16,12 +16,14 @@
 
 	<script type='text/javascript'>
 	$(function() {
-	var hachedoses = 0;
+	var suma = 0;
 	$("td").each( function() {
-		hachedoses += this.textContent + " - ";
+		if(!isNaN(this.value) && this.value.length!=0) {
+            suma += parseFloat(this.value);
+        }
 	} );
 	alert(hachedoses);
-	$("#cambiando").html( hachedoses );
+	$("#cambiando").text(suma);
 	});
 	</script>
 
