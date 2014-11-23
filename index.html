@@ -16,25 +16,23 @@
 
 	<script type='text/javascript'>
 	$(function() {
-		$(".npistas").each( function() {	// Itero por cada td cuyo class es npistas
-			var suma = $(this).text();	
-			if(!isNaN(suma) && suma.length!=0) {
-		        suma += parseInt(suma);
-		    }
-		} );
-
-	$("#cambiando").text(suma);
+		$("#total").sumtr( { sumCells : '.npistas' } );	// Itero por cada td cuyo class es npistas
 	});
 	</script>
 
 	<table title="Circuito Jerez" border bgcolor="#FF5522">
-	<tr><td>Tipo Pieza</td><td>Número pistas</td></tr>
-	<tr><td>Rectas largas</td><td class="npistas">8</td></tr>
-	<tr><td>Rectas medias</td><td class="npistas">5</td></tr>
-	<tr><td>Rectas cortas</td><td class="npistas">7</td></tr>
-	<tr><td>Curvas abiertas</td><td class="npistas">12</td></tr>
-	<tr><td>Curvas 90º</td> <td class="npistas">6</td></tr>
-	<tr><td>Curvas cerradas</td> <td class="npistas">8</td></tr>
+	<thead><tr><th>Tipo Pieza</th><th>Número pistas</th></tr></thead>
+	<tbody>
+		<tr><td>Rectas largas</td><td class="npistas">8</td></tr>
+		<tr><td>Rectas medias</td><td class="npistas">5</td></tr>
+		<tr><td>Rectas cortas</td><td class="npistas">7</td></tr>
+		<tr><td>Curvas abiertas</td><td class="npistas">12</td></tr>
+		<tr><td>Curvas 90º</td> <td class="npistas">6</td></tr>
+		<tr><td>Curvas cerradas</td> <td class="npistas">8</td></tr>
+	</tbody>
+	<tfoot> 
+		<tr class="total"> <td>Total: </td> <td></td> </tr> 
+	</tfoot>
 	</table>
 
 
