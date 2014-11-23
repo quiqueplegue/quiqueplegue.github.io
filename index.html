@@ -29,15 +29,15 @@
 	$(document).ready(function() {
 		var suma = 0;
 		$('.npistas').each(function(){
-			var numPistas = $(this);
-			suma += parseInt(numPistas.val());
+			var numPistas = parseInt($(this).val());
+			suma += numPistas;
 		});
 
-		$('#total').html(suma);
+		$("#total").html(suma);
 	});
 	</script>
 
-	<div id='total'> </div>
+	<div id='total'>No tengo nada que decir</div>
 
 </body>
 </html>
