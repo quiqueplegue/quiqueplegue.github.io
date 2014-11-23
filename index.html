@@ -29,7 +29,8 @@
 	$(document).ready(function() {
 		var suma = 0;
 		$('.npistas').each(function(){
-			suma += parseInt($(this).html());
+			var numPistas = $(this);
+			suma += parseInt(numPistas.val());
 		});
 
 		$('#total').html(suma);
