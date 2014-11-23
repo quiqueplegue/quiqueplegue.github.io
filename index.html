@@ -16,12 +16,12 @@
 
 	<script type='text/javascript'>
 	$(function() {
-	var suma = 0;
-	$(".npistas").each( function() {
-		if(!isNaN(this.value) && this.value.length!=0) {
-            suma += parseInt(this.value);
-        }
-	} );
+		$(".npistas").each( function() {	// Itero por cada td cuyo class es npistas
+			var suma = $(this).text();	
+			if(!isNaN(suma) && suma.length!=0) {
+		        suma += parseInt(suma);
+		    }
+		} );
 
 	$("#cambiando").text(suma);
 	});
