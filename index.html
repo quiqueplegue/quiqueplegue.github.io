@@ -27,12 +27,12 @@
 
 	<script type='text/javascript'>
 	$(document).ready(function() {
-		var suma=parseInt(0);
+		var suma = 0;
 		$('.npistas').each(function(){
-			suma += parseInt($(this).val());
+			suma += parseInt($(this).html());
 		});
 
-		$("#total").html(suma);
+		$('#total').html(suma);
 	});
 	</script>
 
