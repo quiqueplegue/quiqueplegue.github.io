@@ -68,22 +68,19 @@
 
 
 <script>
-    $(document).ready(function() {
-        var sum = 0;
-        var quantity = 0;
-        $('.price').each(function() {
-            sum += (parseInt($('.price').val()) * parseInt($('.price').val()));
-            quantity += parseInt($('.quantity').val();
-        });
+$(document).ready(function() {
+    var sum = 0;
+    var quantity = 0;
+    $('.price').each(function() {
+        var price = $(this);
+        var q = price.closest('tr').find('.quantity').val();
+        sum += parseInt(price.val()) * parseInt(q);
+        quantity += parseInt(q);
+    });
 
-        $('#total_price').html(sum);
-        $('#total_quantity').html(quantity);
-    })
-</script>
-
-
-
-
+    $('#total_price').html(sum);
+    $('#total_quantity').html(quantity);
+});</script>
 
 
 
