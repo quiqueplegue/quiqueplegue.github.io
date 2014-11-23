@@ -14,12 +14,6 @@
 	<input type="checkbox" name="navegar" value="navegando"> Cheese
 	<br>
 
-	<script type='text/javascript'>
-	$(function() {
-		$("#total").sumtr( { sumCells : '.npistas' } );	// Itero por cada td cuyo class es npistas
-	});
-	</script>
-
 	<table title="Circuito Jerez" border bgcolor="#FF5522">
 	<thead><tr><th>Tipo Pieza</th><th>Número pistas</th></tr></thead>
 	<tbody>
@@ -35,8 +29,11 @@
 	</tfoot>
 	</table>
 
+	<script type='text/javascript'>
+	$(function() {
+		$("#total").sumtr( { sumCells : '.npistas' } );	// Itero por cada td cuyo class es npistas
+	});
+	</script>
 
-	<p>La suma de pistas de la tabla es: </p>
-	<div id='cambiando' style='border:dashed'></div>
 </body>
 </html>
