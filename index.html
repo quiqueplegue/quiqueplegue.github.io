@@ -13,15 +13,20 @@
 	<table title="circuitoJerez" border bgcolor="#FF5522">
 	<thead><tr><th>Tipo Pieza</th><th>Número pistas</th></tr></thead>
 	<tbody>
-		<tr><td>Rectas largas</td><td class="npistas">8</td></tr>
-		<tr><td>Rectas medias</td><td class="npistas">5</td></tr>
-		<tr><td>Rectas cortas</td><td class="npistas">7</td></tr>
-		<tr><td>Curvas abiertas</td><td class="npistas">12</td></tr>
-		<tr><td>Curvas 90º</td> <td class="npistas">6</td></tr>
-		<tr><td>Curvas cerradas</td> <td class="npistas">8</td></tr>
+		<tr>
+			<td>Rectas largas</td>
+			<td><input class="npistas" type="text" name="npistas"/></td>
+		</tr>
+		<tr>
+			<td>Rectas medias</td>
+			<td><input class="npistas" type="text" name="npistas"/></td>
+		</tr>
 	</tbody>
 	<tfoot> 
-		<tr class="totalTabla"> <td>Total: </td> <td></td> </tr> 
+		<tr class="totalTabla">
+			<td>Total: </td>
+			<td align="center"><span id="sumaTotal">0</span></td>
+		</tr> 
 	</tfoot>
 	</table>
 
@@ -29,12 +34,23 @@
 	$(document).ready(function() {
 		var suma = 0;
 		$('.npistas').each(function(){
-			var numPistas = parseInt($(this));
-			suma += numPistas;
+			$(this).keyup(function(){
+				computaSuma();
+			});
 		});
-
-		$("#total").html(suma);
 	});
+
+
+	function computaSuma(){
+		var suma=0;
+		$(".npistas").each(function(){
+			if(!isNaN(this.value)){
+				suma += parseInt(this.value);
+			}
+		});
+		$("#sumaTotal").html(suma);
+	}
+
 	</script>
 
 	<br>
@@ -112,7 +128,5 @@
         $("#sum").html(sum.toFixed(2));
     }
 </script>
-
-
 </body>
 </html>
