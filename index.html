@@ -11,12 +11,13 @@
 	<h2>Pero seguro que podría mejorar</h2>
 
 	<p>Aquí te pongo un checkbox</p>
-	<input type="checkbox" name="navegar" value="navegando"> Cheese<br>
+	<input type="checkbox" name="navegar" value="navegando"> Cheese
+	<br>
 
 	<script type='text/javascript'>
 	$(function() {
-	var hachedoses ='';
-	$("h2").each( function() {
+	var hachedoses = 0;
+	$("td").each( function() {
 		hachedoses += this.textContent + " - ";
 	} );
 	alert(hachedoses);
@@ -25,12 +26,12 @@
 	</script>
 
 	<table border bgcolor="#FF5522">
-	<tr><td bgcolor="#00FF00">fila1-celda1</td><td>fila1-celda2</td></tr>
-	<tr> <td>fila2-celda1</td> <td>fila2-celda2</td> </tr>
+	<tr><td bgcolor="#00FF00">5</td><td>0</td></tr>
+	<tr> <td>2</td> <td>3</td> </tr>
 	</table>
 
 
-	
+	<p>La suma de la tabla es: </p>
 	<div id='cambiando' style='border:dashed'></div>
 </body>
 </html>
