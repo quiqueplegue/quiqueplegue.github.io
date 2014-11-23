@@ -25,13 +25,18 @@
 		<tr><td>Curvas cerradas</td> <td class="npistas">8</td></tr>
 	</tbody>
 	<tfoot> 
-		<tr class="summary"> <td>Total: </td> <td></td> </tr> 
+		<tr class="total"> <td>Total: </td> <td></td> </tr> 
 	</tfoot>
 	</table>
 
 	<script type='text/javascript'>
 	$(document).ready(function() {
-		$("#circuitoJerez").sumtr( { sumCells : '.npistas' } );	// Itero por cada td cuyo class es npistas
+		var suma=0;
+		$('.npistas').each(function(){
+			suma += parseInt($this.val());
+		});
+
+		$("#total").html(suma);
 	});
 	</script>
 
