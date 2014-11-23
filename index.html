@@ -37,7 +37,56 @@
 	});
 	</script>
 
-	<div id='total'><p>No tengo nada que decir</p></div>
+	<div id='total'><h3>No tengo nada que decir</h3></div>
+
+
+
+
+<table>
+    <tr>
+        <td><input type="text"></td>
+        <td><input class="price" type="text" value="100"></td>
+        <td><input class="quantity" type="text" value="2"></td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="text"></td>
+        <td><input class="price" type="text" value="100"></td>
+        <td><input class="quantity" type="text" value="5"></td>
+        <td><input type="text"></td>
+    </tr>
+    <tfoot>
+        <tr class="summary">
+            <td>Total:</td>
+            <td id="total_price"></td>
+            <td id="total_quantity"></td>
+            <td class="second"></td>
+            <td class="third"></td>
+        </tr>
+    </tfoot>    
+</table>
+
+
+<script>
+    $(document).ready(function() {
+        var sum = 0;
+        var quantity = 0;
+        $('.price').each(function() {
+            sum += (parseInt($('.price').val()) * parseInt($('.price').val()));
+            quantity += parseInt($('.quantity').val();
+        });
+
+        $('#total_price').html(sum);
+        $('#total_quantity').html(quantity);
+    })
+</script>
+
+
+
+
+
+
+
 
 </body>
 </html>
