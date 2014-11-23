@@ -19,10 +19,10 @@
 	var suma = 0;
 	$("td").each( function() {
 		if(!isNaN(this.value) && this.value.length!=0) {
-            suma += parseFloat(this.value);
+            suma += parseInt(this.value);
         }
 	} );
-	alert(hachedoses);
+
 	$("#cambiando").text(suma);
 	});
 	</script>
